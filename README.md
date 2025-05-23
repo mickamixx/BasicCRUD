@@ -10,8 +10,8 @@ Além disso, o projeto inclui proteção contra ataques CSRF, garantindo seguran
 
 ## Tecnologias Utilizadas
 
-- Python 3.x  
-- Django (versão X.X)  
+- Python 3.11.9  
+- Django (versão 5.2.1)  
 - HTML com templates Django  
 - Git para controle de versão  
 
