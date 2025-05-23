@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listagem</title>
+</head>
+<body>
+    <h1>Listagem de Transações</h1>
+    <ul>
+    {% for transacao in Transacao %}
+        {% if transacao.id %}
+            <li>
+                <a href="{% url 'url_update' transacao.id %}">Editar</a> -
+                {{ transacao.descricao }} -
+                {{ transacao.data }} -
+                {{ transacao.valor }} -
+                {{ transacao.categoria }}
+            </li>
+        {% else %}
+            <li>Transação inválida (sem ID)</li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+
+    <a href="{% url 'url_nova' %}">Criar Novo</a>
+</body>
+</html>

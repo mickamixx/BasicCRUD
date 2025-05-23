@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listagem de Transações</title>
+</head>
+<body>
+    <h1>Transações</h1>
+
+    <ul>
+        {% for transacao in transacoes %}
+            <li>{{ transacao.descricao }} - R$ {{ transacao.valor }} em {{ transacao.data }}</li>
+        {% empty %}
+            <li>Nenhuma transação encontrada.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
